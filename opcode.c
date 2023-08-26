@@ -19,13 +19,10 @@ operand checkopcode(char **cmd)
 		{"div", thediv},
 		{"mul", mul},
 		{"mod", mod},
-		{"#", ignore},
 		{"pchar", pchar},
 		{"pstr", pstr},
 		{"rotl", rotl},
 		{"rotr", rotr},
-		{"stack", stack},
-		{"queue", queue},
 		{NULL, NULL}
 	};
 	int i = 0;
@@ -47,6 +44,8 @@ void opcodemgr(char **cmd, stack_t **tail, unsigned int *line_number)
 {
 	operand func = NULL;
 
+	if (cmd[0][0] == '#')
+		return;
 	func = checkopcode(cmd);
 	if (func == NULL)
 		return;

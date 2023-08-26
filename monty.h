@@ -27,6 +27,7 @@ typedef struct stack_s
 /**
   *struct instruction_s - opcode and its function
   *@opcode: the opcode
+  *@f: function of type operand
   *
   *Description: opcode and its function
   *for stack, queues, LIFO, FIFO
@@ -46,6 +47,7 @@ stack_t *tail;
 stack_t *head;
 
 char **cmdgen(char *readbuf);
+int print_char(int c);
 void exit_m(char *msg);
 
 void cleanup(void);
@@ -65,11 +67,8 @@ void sub(stack_t **stack, unsigned int line_number);
 void thediv(stack_t **stack, unsigned int line_number);
 void mul(stack_t **stack, unsigned int line_number);
 void mod(stack_t **stack, unsigned int line_number);
-void ignore(stack_t **stack, unsigned int line_number);
 void pchar(stack_t **stack, unsigned int line_number);
 void pstr(stack_t **stack, unsigned int line_number);
 void rotl(stack_t **stack, unsigned int line_number);
 void rotr(stack_t **stack, unsigned int line_number);
-void stack(stack_t **stack, unsigned int line_number);
-void queue(stack_t **stack, unsigned int line_number);
 #endif

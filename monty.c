@@ -2,7 +2,7 @@
 #include "monty.h"
 /**
   *main - the main function for the mony program
-  &@argc: the number of arguments passed
+  *@argc: the number of arguments passed
   *@argv: the arguments themselves
   *
   *Return: exit success or failure

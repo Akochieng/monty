@@ -29,7 +29,7 @@ void push(stack_t **stack, unsigned int line_number)
 /**
   *pall - prints all the numbers in the stack
   *@stack: the tail of the stack
-  *line_number: the line number of the stack
+  *@line_number: the line number of the stack
   *
   *Return: void
   */
@@ -85,6 +85,7 @@ void  pop(stack_t **stack, unsigned int line_number)
 }
 /**
   *swap - swap the top intergers in the stack
+  *@stack: the tail of the stack
   *@line_number: the line number
   *
   *Return: void

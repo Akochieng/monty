@@ -1,6 +1,7 @@
 #include "monty.h"
 /**
   *free2xarray - frees a two dimensional array
+  *@arr: the two dimensional array
   *
   *Return: void
   */
@@ -16,6 +17,7 @@ void free2xarray(char **arr)
 }
 /**
   *reset2xarr - resets the contents of a two dimensional array
+  *@arr: pointer to the two dimensional array
   *
   *Return: void
   */
