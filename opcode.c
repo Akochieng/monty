@@ -47,8 +47,14 @@ void opcodemgr(char **cmd, stack_t **tail, unsigned int *line_number)
 	if (cmd[0][0] == '#')
 		return;
 	func = checkopcode(cmd);
-	if (func == NULL)
+	if (func == NULL && cmd[0][0] == '\n')
 		return;
-	++*line_number;
+	++line_number;
+	if (func == NULL)
+	{
+		fprintf(stderr, "L%u: unknown instruction %s\n", *line_number,
+				cmd[0]);
+		exit_m(NULL);
+	}
 	func(tail, *line_number);
 }

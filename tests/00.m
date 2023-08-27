@@ -1,7 +1,7 @@
 push 1$
 push 2$
 pint
-push 3$
+pusha 3$
 pall
 pop
 pall
