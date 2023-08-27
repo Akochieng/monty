@@ -47,6 +47,7 @@ stack_t *tail;
 stack_t *head;
 
 char **cmdgen(char *readbuf);
+int isint(char *s);
 int print_char(int c);
 void exit_m(char *msg);
 

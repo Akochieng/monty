@@ -58,3 +58,18 @@ void opcodemgr(char **cmd, stack_t **tail, unsigned int *line_number)
 	}
 	func(tail, *line_number);
 }
+/**
+  *isint - checks whether the first two characters are intergers'
+  *@s: the string
+  *
+  *Return: 1 if int, otherwise, 0
+  */
+int isint(char *s)
+{
+	if (s[0] >= '0' && s[0] <= '9')
+		return (1);
+	else if (s[0] == '-')
+		if (s[1] && s[1] >= '0' && s[1] <= '9')
+			return (1);
+	return (0);
+}
