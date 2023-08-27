@@ -11,7 +11,7 @@ int main(int argc, char **argv)
 {
 	FILE *file = NULL;
 	size_t n, w;
-	unsigned int line_num = 0;
+	unsigned int line_num = 1;
 	int count;
 
 	tail = head = NULL;
@@ -20,7 +20,7 @@ int main(int argc, char **argv)
 		exit_m("Error: malloc failed");
 	readbuf = NULL;
 	atexit(cleanup);
-	line_num = n = w = 0;
+	n = w = 0;
 	if (argc < 2)
 		exit_m("USAGE: monty file");
 	for (count = 1; count < argc; count++)
